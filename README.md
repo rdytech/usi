@@ -1,6 +1,9 @@
-# Usi
+# USI
 
-TODO: Write a gem description
+[![Code Climate](https://codeclimate.com/github/jobready/usi.png)](https://codeclimate.com/github/jobready/usi)
+[![Build Status](https://travis-ci.org/jobready/usi.svg)](https://travis-ci.org/jobready/usi)
+
+A gem for validating USI (Unique Student Identifiers)
 
 ## Installation
 
@@ -18,12 +21,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'usi'
+
+Usi::Validator.new("123456789X").valid?
+
+```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/usi/fork )
+1. Fork it ( http://github.com/jobready/usi/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+5. Create new Pull Request
+
