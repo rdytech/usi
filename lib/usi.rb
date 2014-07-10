@@ -1,5 +1,9 @@
-require "usi/version"
-
 module Usi
-  # Your code goes here...
+end
+
+require "usi/version"
+require "usi/validator"
+
+if defined?(Rails)
+  require "usi_validator"
 end
