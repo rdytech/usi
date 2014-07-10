@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.1.2
+cache:
+  - bundler
+  - apt
+bundler_args: -j4 --quiet
