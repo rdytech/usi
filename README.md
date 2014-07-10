@@ -3,7 +3,13 @@
 [![Code Climate](https://codeclimate.com/github/jobready/usi.png)](https://codeclimate.com/github/jobready/usi)
 [![Build Status](https://travis-ci.org/jobready/usi.svg)](https://travis-ci.org/jobready/usi)
 
-A gem for validating USI (Unique Student Identifiers)
+A gem for validating USI (Unique Student Identifiers) for VET Students in Australia
+
+From the Department of Industry's website -
+
+    USI is effectively an account or reference number made up of numbers and letters.  The USI will allow all of an individual’s training records, entered in the national vocational education and training (VET) data collection, to be linked. 
+    The USI will be available online and at no cost to the student. This USI will stay with the student for life and be recorded with any nationally recognised VET course that is undertaken from when the USI comes into effect.
+
 
 ## Installation
 
