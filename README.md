@@ -28,6 +28,14 @@ Usi::Validator.new("123456789X").valid?
 
 ```
 
+or in Rails
+
+```ruby
+class Student < ActiveRecord::Base
+  validates :idenfier, usi: true
+end
+```
+
 ## Contributing
 
 1. Fork it ( http://github.com/jobready/usi/fork )
