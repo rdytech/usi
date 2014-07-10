@@ -32,7 +32,7 @@ or in Rails
 
 ```ruby
 class Student < ActiveRecord::Base
-  validates :idenfier, usi: true
+  validates :identifier, usi: true
 end
 ```
 
