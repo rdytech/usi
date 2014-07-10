@@ -24,7 +24,7 @@ Or install it yourself as:
 ```ruby
 require 'usi'
 
-Usi::Validator.new("123456789X").valid?
+Usi::Validator.new('223456789N').valid?
 
 ```
 
