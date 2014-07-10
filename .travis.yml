@@ -5,3 +5,5 @@ cache:
   - bundler
   - apt
 bundler_args: -j4 --quiet
+script:
+  - bundle exec rspec
