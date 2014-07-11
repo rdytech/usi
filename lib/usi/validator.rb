@@ -11,37 +11,20 @@ class Usi::Validator
   end
 
   def valid?
-    return false unless ten_valid_characters?
-    identifier[-1] == check_character(identifier[0..8])
+    if ten_valid_characters?
+      identifier[-1] == checker.generate(identifier[0..8])
+    else
+      false
+    end
+  end
+
+  def checker
+    @checker ||= Usi::LuhnCheck.new(VALID_CHARACTERS)
   end
 
   private
 
   def ten_valid_characters?
     identifier =~ /\A[#{VALID_CHARACTERS.join}]{10}\z/
-  end
-
-  def check_character(string)
-    # Implementation of Luhn Mod N algorithm for check digit
-    factor = 2
-    sum = 0
-    base_n = VALID_CHARACTERS.length
-
-    string.reverse.each_char do |character|
-      code_point = VALID_CHARACTERS.index(character)
-
-      addend = factor * code_point
-      # Alternate the "factor" that each "codePoint" is multiplied by
-      factor = factor == 2 ? 1 : 2
-      # Sum the digits of the "addend" as expressed in base "n"
-      addend = (addend / base_n) + (addend % base_n)
-      sum += addend
-    end
-
-    # Calculate the number that must be added to the "sum"
-    # to make it divisible by base "n"
-    remainder = sum % base_n
-    check = (base_n - remainder) % base_n
-    VALID_CHARACTERS[check]
   end
 end
