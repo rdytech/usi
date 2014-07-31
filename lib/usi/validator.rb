@@ -12,7 +12,7 @@ class Usi::Validator
 
   def valid?
     if ten_valid_characters?
-      identifier[-1] == checker.generate(identifier[0..8])
+      identifier.split('').last == checker.generate(identifier[0..8])
     else
       false
     end
