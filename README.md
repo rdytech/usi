@@ -7,7 +7,7 @@ A gem for validating USI (Unique Student Identifiers) for VET Students in Austra
 
 From the Department of Industry's website -
 
-    USI is effectively an account or reference number made up of numbers and letters.  The USI will allow all of an individual’s training records, entered in the national vocational education and training (VET) data collection, to be linked. 
+    USI is effectively an account or reference number made up of numbers and letters.  The USI will allow all of an individual’s training records, entered in the national vocational education and training (VET) data collection, to be linked.
     The USI will be available online and at no cost to the student. This USI will stay with the student for life and be recorded with any nationally recognised VET course that is undertaken from when the USI comes into effect.
 
 
@@ -34,11 +34,23 @@ Usi::Validator.new('223456789N').valid?
 
 ```
 
-or in Rails
+in Rails 3+
 
 ```ruby
 class Student < ActiveRecord::Base
   validates :identifier, usi: true
+end
+```
+
+in Rails 2.3
+
+```ruby
+class Student < ActiveRecord::Base
+  validate :must_be_valid_format_usi
+
+  def must_be_valid_format_usi
+    errors.add_to_base('USI format invalid') unless Usi::Validator.new(usi).valid?
+  end
 end
 ```
 
