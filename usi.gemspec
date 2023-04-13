@@ -16,11 +16,11 @@ Gem::Specification.new do |spec|
   spec.required_rubygems_version = '>= 1.3.6'
 
   spec.add_development_dependency 'bundler', '> 1.0'
-  spec.add_development_dependency 'rspec', '~> 2.14'
-  spec.add_development_dependency 'cane', '~> 2.6'
-  spec.add_development_dependency 'byebug', '~> 2.7'
-  spec.add_development_dependency 'rake', '~> 10.1'
-  spec.add_development_dependency 'coveralls', '~> 0'
+  spec.add_development_dependency 'rspec', '> 2.14'
+  spec.add_development_dependency 'cane', '> 2.6'
+  spec.add_development_dependency 'byebug', '> 2.7'
+  spec.add_development_dependency 'rake', '> 10.1'
+  spec.add_development_dependency 'coveralls', '> 0'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
