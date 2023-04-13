@@ -1,4 +1,3 @@
-# create github action to execute ruby spec suite
 name: Run specs
 on: [push]
 jobs:
