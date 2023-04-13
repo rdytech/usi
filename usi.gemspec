@@ -20,7 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'cane', '> 2.6'
   spec.add_development_dependency 'byebug', '> 2.7'
   spec.add_development_dependency 'rake', '> 10.1'
-  spec.add_development_dependency 'coveralls', '> 0'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
