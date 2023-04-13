@@ -6,6 +6,7 @@ require 'usi/version'
 Gem::Specification.new do |spec|
   spec.name          = 'usi'
   spec.version       = Usi::VERSION
+  spec.authors       = ['ReadyTech']
   spec.email         = ['engineering@readytech.io']
   spec.summary       = %q{Validate Australian Government USI}
   spec.description   = %q{A gem for validating Australian Government Unique Student Identifiers (USI)}
