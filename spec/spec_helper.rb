@@ -1,9 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter
-]
+SimpleCov.formatter = SimpleCov::Formatter::HTMLFormatter
 
 SimpleCov.configure do
   add_filter '/spec/'
