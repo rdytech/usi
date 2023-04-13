@@ -1,7 +1,8 @@
 # USI
 
 [![Code Climate](https://codeclimate.com/github/jobready/usi.png)](https://codeclimate.com/github/jobready/usi)
-[![Build Status](https://travis-ci.org/jobready/usi.svg)](https://travis-ci.org/jobready/usi)
+[![Gem Downloads](https://img.shields.io/gem/dt/usi.svg)](https://rubygems.org/gems/usi)
+![specs workflow](https://github.com/rdytech/usi/actions/workflows/run-specs.yml/badge.svg)
 
 A gem for validating USI (Unique Student Identifiers) for VET Students in Australia
 
@@ -56,7 +57,7 @@ end
 
 ## Contributing
 
-1. Fork it ( http://github.com/jobready/usi/fork )
+1. Fork it ( http://github.com/rdytech/usi/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
